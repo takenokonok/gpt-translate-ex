@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>プライバシーポリシー · タブ音声リアルタイム吹き替え</title>
+    <meta
+      name="description"
+      content="Chrome 拡張機能「タブ音声リアルタイム吹き替え」のプライバシーポリシー"
+    />
+    <link rel="canonical" href="https://takenokonok.github.io/gpt-translate-ex/" />
+    <style>
+      :root {
+        color-scheme: light dark;
+        --bg: #f8fafc;
+        --fg: #0f172a;
+        --muted: #475569;
+        --border: #e2e8f0;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --bg: #0f172a;
+          --fg: #f1f5f9;
+          --muted: #94a3b8;
+          --border: #334155;
+        }
+      }
+      body {
+        margin: 0;
+        padding: clamp(16px, 4vw, 40px);
+        font-family:
+          ui-sans-serif,
+          system-ui,
+          -apple-system,
+          "Segoe UI",
+          Roboto,
+          "Noto Sans JP",
+          sans-serif;
+        line-height: 1.65;
+        color: var(--fg);
+        background: var(--bg);
+      }
+      main {
+        max-width: 48rem;
+        margin: 0 auto;
+      }
+      h1 {
+        font-size: 1.65rem;
+        font-weight: 800;
+        letter-spacing: -0.02em;
+        margin-bottom: 0.25rem;
+      }
+      .meta {
+        font-size: 0.875rem;
+        color: var(--muted);
+        margin-bottom: 1.5rem;
+      }
+      h2 {
+        font-size: 1.1rem;
+        font-weight: 750;
+        margin: 2rem 0 0.65rem;
+        border-bottom: 1px solid var(--border);
+        padding-bottom: 0.35rem;
+      }
+      p {
+        margin: 0.6rem 0;
+      }
+      ul {
+        padding-left: 1.35rem;
+        margin: 0.5rem 0;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 0.875rem;
+        margin: 0.85rem 0;
+      }
+      th,
+      td {
+        border: 1px solid var(--border);
+        padding: 0.55rem 0.65rem;
+        vertical-align: top;
+      }
+      th {
+        white-space: nowrap;
+        font-weight: 650;
+      }
+      a {
+        color: #2563eb;
+      }
+      @media (prefers-color-scheme: dark) {
+        a {
+          color: #93c5fd;
+        }
+      }
+      code {
+        font-size: 0.875em;
+        padding: 0.1rem 0.25rem;
+        border-radius: 4px;
+        background: rgb(148 163 184 / 0.18);
+      }
+      footer {
+        margin-top: 2.5rem;
+        font-size: 0.8rem;
+        color: var(--muted);
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>プライバシーポリシー</h1>
+      <p class="meta"><strong>最終更新日:</strong> 2026-05-16</p>
+      <p>
+        本ページは Chrome 拡張機能「タブ音声リアルタイム吹き替え」（以下「本拡張機能」）に関するプライバシー情報です。
+      </p>
+
+      <h2>開発者</h2>
+      <ul>
+        <li><strong>開発者:</strong> kotaro.otake</li>
+        <li><strong>連絡先:</strong> kotaro.otake@takenokonoko.com</li>
+      </ul>
+
+      <h2>収集するデータ</h2>
+      <p>
+        本拡張機能は、<strong
+          >開発者のサーバーにユーザー情報・音声・字幕などを送信する機能を一切持ちません。</strong
+        >
+        すべての処理はユーザー自身のブラウザ内で行われ、OpenAI API への通信もユーザー環境から直接行われます。
+      </p>
+      <table>
+        <thead>
+          <tr>
+            <th>項目</th>
+            <th>取り扱い</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>OpenAI API キー</td>
+            <td>
+              ユーザーが拡張のポップアップに入力したキーは、<strong
+                >ユーザー本人のブラウザ内（<code>chrome.storage.local</code>）にのみ保存</strong
+              >され、音声・字幕の処理のために <strong>OpenAI の API（<code>api.openai.com</code>）へユーザー環境から直接送信</strong>されます。開発者がキーを収集・保管・閲覧することはありません。
+            </td>
+          </tr>
+          <tr>
+            <td>タブの音声</td>
+            <td>
+              <strong>ユーザーが「開始」を押したセッションの間に限り</strong>、Chrome の
+              <code>tabCapture</code> 機能でキャプチャされた音声がブラウザ内で処理され、OpenAI の Realtime Translation
+              API へ WebRTC 経由で送信されます。セッション終了後は破棄されます。
+            </td>
+          </tr>
+          <tr>
+            <td>設定情報</td>
+            <td>
+              翻訳先言語、元音声・吹替の音量、字幕表示の ON/OFF、字幕パネルの位置とサイズ。これらはユーザーのブラウザ内（<code>chrome.storage.local</code>）にのみ保存されます。
+            </td>
+          </tr>
+          <tr>
+            <td>閲覧履歴・個人を特定できる情報の販売・第三者提供</td>
+            <td><strong>行いません。</strong></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>権限の利用目的</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>権限</th>
+            <th>用途</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>storage</code></td>
+            <td>API キー、言語、音量、字幕表示などの設定をローカルに保存するため。</td>
+          </tr>
+          <tr>
+            <td><code>tabCapture</code></td>
+            <td>現在のタブから音声を取得し、リアルタイム翻訳の入力として使うため。</td>
+          </tr>
+          <tr>
+            <td><code>activeTab</code></td>
+            <td>ユーザーが操作中のタブとの連携（音量制御・字幕表示）のため。</td>
+          </tr>
+          <tr>
+            <td><code>offscreen</code></td>
+            <td>Service Worker では動かせない WebRTC / MediaStream を Offscreen Document で実行するため。</td>
+          </tr>
+          <tr>
+            <td><code>scripting</code></td>
+            <td>
+              字幕オーバーレイ表示と元音声の音量制御のためのコンテンツスクリプトを動的に注入するため。
+            </td>
+          </tr>
+          <tr>
+            <td><code>host_permissions: api.openai.com/*</code></td>
+            <td>OpenAI API への直接通信のため。</td>
+          </tr>
+          <tr>
+            <td><code>host_permissions: *://*/*</code></td>
+            <td>
+              任意のウェブページ上で字幕オーバーレイを表示し、元音声の音量を制御するため（ユーザー操作で開始した時のみ動作）。
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>第三者サービス（OpenAI）</h2>
+      <p>
+        本拡張機能は OpenAI の Realtime Translation API を利用します。音声データおよび関連メタデータの取り扱いは、
+        <a href="https://openai.com/policies/privacy-policy">OpenAI のプライバシーポリシー</a> に従います。ユーザーは
+        OpenAI の利用規約およびポリシーを確認のうえ API キーを利用してください。
+      </p>
+
+      <h2>データの保持と削除</h2>
+      <ul>
+        <li>
+          ローカルに保存される設定は、ユーザーが拡張機能を削除する、または
+          <code>chrome://extensions</code>
+          から「拡張機能のデータをすべて削除」を実行することでいつでも消去できます。
+        </li>
+        <li>
+          セッション中にやり取りされる音声・字幕データはブラウザのメモリ上に存在し、停止時または拡張のリロード時に破棄されます。
+        </li>
+      </ul>
+
+      <h2>変更履歴</h2>
+      <p>ポリシーに重要な変更があった場合は、本ページ上部の「最終更新日」を改訂します。</p>
+
+      <h2>お問い合わせ</h2>
+      <p>プライバシーに関するご質問は、上記連絡先までご連絡ください。</p>
+
+      <footer>
+        Markdown ソース:
+        <a href="https://github.com/takenokonok/gpt-translate-ex/blob/main/docs/PRIVACY_POLICY.md"
+          ><code>PRIVACY_POLICY.md</code></a
+        >（編集時はこの HTML と同期してください）
+      </footer>
+    </main>
+  </body>
+</html>
